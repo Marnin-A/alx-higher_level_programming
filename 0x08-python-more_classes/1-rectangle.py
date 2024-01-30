@@ -6,6 +6,12 @@ Defines a class Rectangle
 
 class Rectangle:
 
+    """Instantiation with optional width and height"""
+    def __init__(self, width=0, height=0):
+        """Initializes the rectangle"""
+        self.height = height
+        self.width = width
+
     @property
     def width(self):
         """getter for the private instance attribute width"""
@@ -33,9 +39,3 @@ class Rectangle:
         if value < 0:
             raise ValueError("height must be >= 0")
         self.__height = value
-
-     """Instantiation with optional width and height"""
-    def __init__(self, width=0, height=0):
-        """Initializes the rectangle"""
-        self.height = height
-        self.width = width
